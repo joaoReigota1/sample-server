@@ -91,7 +91,7 @@ resource "aws_elb" "server_elb" {
     bucket        = "sample-server-log-bucket"
     bucket_prefix = "bar"
     interval      = 60
-    enabled       = false
+    enabled       = true
   }
 
   listener {
