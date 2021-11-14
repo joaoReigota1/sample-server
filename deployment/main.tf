@@ -51,7 +51,7 @@ resource "aws_autoscaling_group" "server_auto_scaling" {
   load_balancers       = [aws_elb.server_elb.name]
   availability_zones   = ["eu-west-2b", "eu-west-2a"]
   min_size             = 2
-  max_size             = 5
+  max_size             = 6
 
   tag {
     key                 = "Name"
@@ -112,4 +112,10 @@ resource "aws_elb" "server_elb" {
 
 data "template_file" "user_data" {
   template = file("${path.module}/setup.sh")
+}
+
+
+output "elb_dns_name" {
+  description = "ELB DNS Name"
+  value       = "${aws_elb.server_elb.dns_name}"
 }
