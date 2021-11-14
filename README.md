@@ -75,7 +75,11 @@ terraform destroy
 # Additional Links
 
 https://kics.io/
+
 https://github.com/Checkmarx/kics
+
 https://docs.kics.io/latest/
+
 https://www.terraform.io/
+
 https://aws.amazon.com/
