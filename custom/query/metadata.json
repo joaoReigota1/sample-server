@@ -1,0 +1,11 @@
+{
+    "id": "8769eceb-770e-4937-b000-84e1553f7e06",
+    "queryName": "Company Policy AZ",
+    "severity": "HIGH",
+    "category": "Company Policy",
+    "descriptionText": "It is a Company Policy for ELB AZ to have 'eu-west-2c'",
+    "descriptionUrl": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elb",
+    "platform": "Terraform",
+    "descriptionID": "72a74325",
+    "cloudProvider": "aws"
+}
