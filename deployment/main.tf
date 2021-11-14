@@ -91,7 +91,7 @@ resource "aws_elb" "server_elb" {
     bucket        = "sample-server-log-bucket"
     bucket_prefix = "bar"
     interval      = 60
-    enabled       = true
+    enabled       = false
   }
 
   listener {
@@ -112,4 +112,10 @@ resource "aws_elb" "server_elb" {
 
 data "template_file" "user_data" {
   template = file("${path.module}/setup.sh")
+}
+
+
+output "elb_dns_name" {
+  description = "ELB DNS Name"
+  value       = "${aws_elb.server_elb.dns_name}"
 }
