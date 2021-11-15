@@ -6,6 +6,5 @@
     "descriptionText": "It is a Company Policy for ELB AZ to have 'eu-west-2c'",
     "descriptionUrl": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/elb",
     "platform": "Terraform",
-    "descriptionID": "72a74325",
     "cloudProvider": "aws"
 }
