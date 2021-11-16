@@ -51,7 +51,7 @@ resource "aws_autoscaling_group" "server_auto_scaling" {
   load_balancers       = [aws_elb.server_elb.name]
   availability_zones   = ["eu-west-2b", "eu-west-2a"]
   min_size             = 2
-  max_size             = 6
+  max_size             = 5
 
   tag {
     key                 = "Name"
@@ -84,14 +84,14 @@ resource "aws_security_group" "elb" {
 
 resource "aws_elb" "server_elb" {
   name               = "go-simple-server"
-  availability_zones = ["eu-west-2b", "eu-west-2a"]
+  availability_zones = ["eu-west-2c", "eu-west-2a"]
   security_groups    = [aws_security_group.elb.id]
 
   access_logs {
     bucket        = "sample-server-log-bucket"
     bucket_prefix = "bar"
     interval      = 60
-    enabled       = false
+    enabled       = true
   }
 
   listener {
